@@ -1,7 +1,7 @@
 #include"MPT_Node.h"
 
 /*
-Ä£ÄâÊý¾Ý[Keys,Values]£º
+Ã„Â£Ã„Ã¢ÃŠÃ½Â¾Ã[Keys,Values]Â£Âº
 a711355 45
 a77d337 1
 a7f9365 2
@@ -74,13 +74,13 @@ bool Node_Verify(string m)
 			string p = m.substr(str.length(), 1);
 			str += p;
 			tmp = tmp->next_node[to_int(p.c_str())];
-			mlength -= str.length();
 		}
 		else
 		{
 			return false;
 		}
 	}
+	mlength -= str.length();
 	if (mlength != tmp->shared_nibbles.length())
 		return false;
 	str = str + tmp->shared_nibbles;
